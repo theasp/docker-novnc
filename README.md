@@ -1,10 +1,10 @@
-This is based on @psharkey's work: https://github.com/psharkey/docker/tree/master/novnc
+This is based on the alpine container by @psharkey: https://github.com/psharkey/docker/tree/master/novnc
 
-[![](https://badge.imagelayers.io/psharkey/novnc:latest.svg)](https://imagelayers.io/?images=psharkey/novnc:latest 'Get your own badge on imagelayers.io')
-# Alpine X11 Display Container
+# noVNC Display Container
 ```
 ```
-This image is intended to be used for displaying X11 applications from other containers in a browser. A stand-alone demo as well as a [Version 2](https://docs.docker.com/compose/compose-file/#version-2) composition. Thanks to [Alpine](https://hub.docker.com/_/alpine/), this image is < 100Mb and eliminates the need to run an X11 server on your host machine.
+This image is intended to be used for displaying X11 applications from other containers in a browser. A stand-alone demo as well as a [Version 2](https://docs.docker.com/compose/compose-file/#version-2) composition.
+
 ## Image Contents
 ___
 * [Xvfb](http://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml) - X11 in a virtual framebuffer
