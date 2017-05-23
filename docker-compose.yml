@@ -10,7 +10,7 @@ services:
     networks:
       - x11
   novnc:  
-    image: psharkey/novnc:latest
+    image: theasp/novnc:latest
     environment:
       # Adjust to your screen size
       - DISPLAY_WIDTH=1600

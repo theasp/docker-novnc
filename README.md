@@ -1,5 +1,3 @@
-This is based on the alpine container by @psharkey: https://github.com/psharkey/docker/tree/master/novnc
-
 # noVNC Display Container
 ```
 ```
@@ -25,11 +23,11 @@ $ docker-machine ip $(docker-machine active)
 ```
 Run: 
 ```bash
-$ docker run --rm -it -p 8080:8080 psharkey/novnc
+$ docker run --rm -it -p 8080:8080 theasp/novnc
 ```
 Open a browser and hit the *Connect* button to see the `xterm` demo at `http://<DOCKER_MACHINE_IP>:8080/vnc.html`
 ### V2 Composition
-A version of the [V2 docker-compose example](https://github.com/psharkey/docker/blob/master/novnc/docker-compose.yml) is shown below to illustrate how this image can be used to greatly simplify the use of X11 applications in other containers. With just `docker-compose up -d`, your favorite IDE can be accessed via a browser.
+A version of the [V2 docker-compose example](https://github.com/theasp/docker/blob/master/docker-compose.yml) is shown below to illustrate how this image can be used to greatly simplify the use of X11 applications in other containers. With just `docker-compose up -d`, your favorite IDE can be accessed via a browser.
 
 Some notable features:
 * An `x11` network is defined to link the IDE and novnc containers
@@ -41,8 +39,8 @@ Some notable features:
 version: '2'
 services:
   ide:
-    image: psharkey/intellij:latest
-#    image: psharkey/netbeans-8.1:latest
+    image: theasp/intellij:latest
+#    image: theasp/netbeans-8.1:latest
     environment:
       - DISPLAY=novnc:0.0
     depends_on:
@@ -50,7 +48,7 @@ services:
     networks:
       - x11
   novnc:  
-    image: psharkey/novnc:latest
+    image: theasp/novnc:latest
     environment:
       # Adjust to your screen size
       - DISPLAY_WIDTH=1600
@@ -65,9 +63,10 @@ networks:
 **If the IDE fails to start simply run `docker-compose restart <container-name>`.** 
 ## On DockerHub / GitHub
 ___
-* DockerHub [psharkey/novnc](https://hub.docker.com/r/psharkey/novnc/)
-* GitHub [psharkey/docker/novnc](https://github.com/psharkey/docker/tree/master/novnc)
+* DockerHub [theasp/novnc](https://hub.docker.com/r/theasp/novnc/)
+* GitHub [theasp/docker/novnc](https://github.com/theasp/docker)
 
 # Thanks
 ___
+This is based on the alpine container by @psharkey: https://github.com/psharkey/docker/tree/master/novnc
 Based on [wine-x11-novnc-docker](https://github.com/solarkennedy/wine-x11-novnc-docker) and [octave-x11-novnc-docker](https://hub.docker.com/r/epflsti/octave-x11-novnc-docker/).
