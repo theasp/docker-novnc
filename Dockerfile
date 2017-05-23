@@ -17,22 +17,13 @@ RUN set -ex; \
       bash \
       fluxbox \
       git \
+      net-tools \
+      novnc \
       socat \
       supervisor \
       x11vnc \
       xterm \
       xvfb
-
-# Clone noVNC from github
-RUN set -ex; \
-    git clone https://github.com/kanaka/noVNC.git /root/noVNC; \
-    git clone https://github.com/kanaka/websockify /root/noVNC/utils/websockify; \
-    rm -rf /root/noVNC/.git; \
-    rm -rf /root/noVNC/utils/websockify/.git; \
-    apt-get remove -y --purge git
-
-# Modify the launch script 'ps -p'
-RUN sed -i -- "s/ps -p/ps -o pid | grep/g" /root/noVNC/utils/launch.sh
 
 COPY . /app
 
