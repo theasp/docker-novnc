@@ -39,8 +39,8 @@ Some notable features:
 version: '2'
 services:
   ide:
-    image: theasp/intellij:latest
-#    image: theasp/netbeans-8.1:latest
+    image: psharkey/intellij:latest
+#    image: psharkey/netbeans-8.1:latest
     environment:
       - DISPLAY=novnc:0.0
     depends_on:
