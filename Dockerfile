@@ -1,4 +1,4 @@
-FROM alpine:3.5.2
+FROM alpine:3.5
 
 # Setup demo environment variables
 ENV HOME=/root \
