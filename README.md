@@ -24,7 +24,7 @@ You can specify the following variables:
 * `RUN_FLUXBOX={yes|no}` (yes)
 
 ### Stand-alone Demo
-Run: 
+Run:
 ```bash
 $ docker run --rm -it -p 8080:8080 theasp/novnc
 ```
@@ -51,12 +51,13 @@ services:
       - novnc
     networks:
       - x11
-  novnc:  
+  novnc:
     image: theasp/novnc:latest
     environment:
       # Adjust to your screen size
       - DISPLAY_WIDTH=1600
       - DISPLAY_HEIGHT=968
+      - RUN_XTERM=no
     ports:
       - "8080:8080"
     networks:
@@ -64,7 +65,7 @@ services:
 networks:
   x11:
 ```
-**If the IDE fails to start simply run `docker-compose restart <container-name>`.** 
+**If the IDE fails to start simply run `docker-compose restart <container-name>`.**
 
 ## On DockerHub / GitHub
 ___
