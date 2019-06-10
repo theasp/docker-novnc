@@ -9,7 +9,6 @@ RUN set -ex; \
       git \
       net-tools \
       novnc \
-      socat \
       supervisor \
       x11vnc \
       xterm \

@@ -9,7 +9,6 @@ This image is intended to be used for displaying X11 applications from other con
 * [x11vnc](http://www.karlrunge.com/x11vnc/) - A VNC server that scrapes the above X11 server
 * [noNVC](https://kanaka.github.io/noVNC/) - A HTML5 canvas vnc viewer
 * [Fluxbox](http://www.fluxbox.org/) - a small window manager
-* [socat](http://www.dest-unreach.org/socat/) - for use with other containers
 * [xterm](http://invisible-island.net/xterm/) - to demo that it works
 * [supervisord](http://supervisord.org) - to keep it all running
 
