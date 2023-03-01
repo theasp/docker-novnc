@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bullseye
 
 # Install git, supervisor, VNC, & X11 packages
 RUN set -ex; \
