@@ -58,7 +58,7 @@ services:
       - DISPLAY_HEIGHT=968
       - RUN_XTERM=no
     ports:
-      - "8080:8080"
+      - "127.0.0.1:8080:8080"
     networks:
       - x11
 networks:
