@@ -27,4 +27,4 @@ ENV HOME=/root \
     RUN_FLUXBOX=yes
 COPY . /app
 CMD ["/app/entrypoint.sh"]
-EXPOSE 8080
+EXPOSE 8081
