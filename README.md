@@ -69,7 +69,7 @@ networks:
 ## On DockerHub / GitHub
 ___
 * DockerHub [theasp/novnc](https://hub.docker.com/r/theasp/novnc/)
-* GitHub [theasp/docker/novnc](https://github.com/theasp/docker)
+* GitHub [theasp/docker-novnc](https://github.com/theasp/docker-novnc)
 
 # Thanks
 ___
